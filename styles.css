@@ -23,7 +23,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: #fff;
-  min-height: 100vh;
+  max-height: 100vh;
 
   background-color: var(--violet);
   background-image: url("images/bg-desktop.svg");
@@ -40,6 +40,11 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .section-hero {
@@ -77,9 +82,9 @@ body {
 
 .copy {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   font-weight: 400;
-  color: hsla(0, 0%, 100%, 0.8);
+  color: #fff;
 }
 
 .btn:link,
@@ -93,17 +98,105 @@ body {
   cursor: pointer;
   display: inline-block;
   box-shadow: 2px 1px 15px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 .btn:hover,
 .btn:active {
+  color: #fff;
+  background-color: hsl(300, 69%, 71%);
 }
 
 .social-links {
+  display: flex;
+  gap: 0.8rem;
+  align-self: flex-end;
 }
 
-.icon {
+.icon-box:link,
+.icon-box:visited {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 100px;
 }
 
-.icon {
-  color: #fff;
+.icon-box:hover,
+.icon-box:active {
+  border: 1px solid hsl(300, 69%, 71%);
+}
+
+.icon-box:hover .svg-icon,
+.icon-box:active .svg-icon {
+  fill: hsl(300, 69%, 71%);
+}
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    /* width: 100%; */
+    padding: 0 5.6rem;
+  }
+  .main {
+    gap: 9.6rem;
+  }
+  
+  .main-header {
+    margin: 5.6rem 0 4.8rem 0;
+    text-align: left;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .section-hero {
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .copy {
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #fff;
+  }
+
+  .social-links {
+    align-self: center;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .btn:link, .btn:visited {
+padding: 1.4rem 9.6rem;
+  }
+
+  .attribution {
+    margin-top: 3.6rem;
+  }
 }
