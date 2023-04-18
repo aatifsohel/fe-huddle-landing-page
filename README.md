@@ -1,4 +1,4 @@
-# Frontend Mentor - Huddle landing page with single introductory section
+# [Frontend Mentor - Huddle landing page with single introductory section](https://aatifsohel.github.io/fe-huddle-landing-page/)
 
 ![Design preview for the Huddle landing page with single introductory section](./design/final-preview.png)
 
